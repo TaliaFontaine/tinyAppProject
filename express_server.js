@@ -17,9 +17,15 @@ app.get("/", (req, res) => {
 //Add route for /urls
 app.get("/urls", (req, res) => {
   let templateVars = { urls: urlDatabase };
-
   res.render("urls_index", templateVars);
 });
+
+//Add route for which will render urls_show.ejs template file
+app.get("/urls/:shortURL", (req, res) => {
+  let templateVars = { shortURL: req.params.shortURL, longURL: urlDatabase[req.params.shortURL] };
+  res.render("urls_show", templateVars);
+});
+
 //Added additional endpoint routes
 app.get("/urls.json", (req, res) => {
   res.json(urlDatabase);
