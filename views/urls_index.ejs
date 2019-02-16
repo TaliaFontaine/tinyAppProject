@@ -9,6 +9,12 @@
   <title>TinyApp</title>
 </head>
 <body style="font-size:20px; padding:50px;">
+  <header>
+   <%include ./partials/_header%>
+  </header>
+  <a href="/">Create New TinyURL</a>
+  <br>
+  <h2>My URLs</h2>
     <ul>
         <%
         for (var key in urls) {
@@ -17,6 +23,6 @@
          <li>   <%=`${key} - ${longURL}`%></li>
         <% } %>
     </ul>
-    <!-- Add EJS code here -->
+
 </body>
 </html>

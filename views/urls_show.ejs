@@ -9,11 +9,15 @@
   <title>TinyApp</title>
 </head>
 <body style="font-size:20px; padding:50px;">
+  <header>
+    <%include ./partials/_header%>
+  </header>
+  <a href="/">Create New TinyURL</a>
+  <br>
 
-    <h3>ShortURL:<%= shortURL %> </h3>
-    <h3>LongURL:<%= longURL %></h3>
+    <h3>TinyURL for <%= longURL %></h3>
+    <h3><%= shortURL %> </h3>
+  <br>
 
-    <br/ >
-    <a href="/">Create new url</a>
 </body>
 </html>
