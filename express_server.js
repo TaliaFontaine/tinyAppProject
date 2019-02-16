@@ -10,9 +10,13 @@ var urlDatabase = {
 app.get("/", (req, res) => {
   res.send("Hello!");
 });
-
+//Added additional endpoint routes
 app.get("/urls.json", (req, res) => {
   res.json(urlDatabase);
+});
+//Added route: response contains HTML code which is rendered in client browser
+app.get("/hello", (req, res) => {
+  res.send("<html><body>Hello <b>World</b></body></html>\n");
 });
 
 app.listen(PORT, () => {
