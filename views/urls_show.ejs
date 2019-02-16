@@ -9,14 +9,11 @@
   <title>TinyApp</title>
 </head>
 <body style="font-size:20px; padding:50px;">
-    <ul>
-        <%
-        for (var key in shortURL) {
-            var longURL = shortURL[key];
-        %>
-         <li>   <%=`${key} - ${longURL}`%></li>
-        <% } %>
-    </ul>
-    <!-- Add EJS code here -->
+
+    <h3>ShortURL:<%= shortURL %> </h3>
+    <h3>LongURL:<%= longURL %></h3>
+
+    <br/ >
+    <a href="/">Create new url</a>
 </body>
 </html>
